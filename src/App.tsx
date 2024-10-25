@@ -69,8 +69,7 @@ function App() {
         <a
           href="#register"
           className="flex items-center justify-center space-x-4"
-        >
-        </a>
+        ></a>
       </div>
       <div className="text-center py-8">
         <h2 className="text-3xl py-8">핵심 기능</h2>
