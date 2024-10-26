@@ -1,4 +1,27 @@
-import { FormEvent } from "react";
+import { FormEvent, useEffect, useState } from "react";
+
+function SvgInline({ url }: { url: string }) {
+  const [svg, setSvg] = useState<string | undefined>(undefined);
+  const [isLoaded, setIsLoaded] = useState<boolean>(false);
+  const [isErrored, setIsErrored] = useState<boolean>(false);
+
+  useEffect(() => {
+    fetch(url)
+      .then((res) => res.text())
+      .then(setSvg)
+      .catch(() => setIsErrored(true))
+      .finally(() => setIsLoaded(true));
+  }, [url]);
+
+  return (
+    <div
+      className={`svgInline svgInline--${isLoaded ? "loaded" : "loading"} ${
+        isErrored ? "svgInline--errored" : ""
+      }`}
+      dangerouslySetInnerHTML={{ __html: svg || "" }}
+    />
+  );
+}
 
 function FeatureCard({
   title,
@@ -69,7 +92,9 @@ function App() {
         <a
           href="#register"
           className="flex items-center justify-center space-x-4"
-        ></a>
+        >
+          <SvgInline url="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" />
+        </a>
       </div>
       <div className="text-center py-8">
         <h2 className="text-3xl py-8">핵심 기능</h2>
