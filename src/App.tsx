@@ -16,8 +16,9 @@ function SvgInline({ url }: { url: string }) {
 
   return (
     <div
-      className={`svgInline svgInline--${isLoaded ? "loaded" : "loading"} ${isErrored ? "svgInline--errored" : ""
-        }`}
+      className={`svgInline svgInline--${isLoaded ? "loaded" : "loading"} ${
+        isErrored ? "svgInline--errored" : ""
+      }`}
       dangerouslySetInnerHTML={{ __html: svg || "" }}
     />
   );
