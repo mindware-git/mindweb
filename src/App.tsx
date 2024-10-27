@@ -1,4 +1,5 @@
 import { FormEvent, useEffect, useState } from "react";
+import { FeatureCards } from "./Feature";
 
 function SvgInline({ url }: { url: string }) {
   const [svg, setSvg] = useState<string | undefined>(undefined);
@@ -15,32 +16,10 @@ function SvgInline({ url }: { url: string }) {
 
   return (
     <div
-      className={`svgInline svgInline--${isLoaded ? "loaded" : "loading"} ${
-        isErrored ? "svgInline--errored" : ""
-      }`}
+      className={`svgInline svgInline--${isLoaded ? "loaded" : "loading"} ${isErrored ? "svgInline--errored" : ""
+        }`}
       dangerouslySetInnerHTML={{ __html: svg || "" }}
     />
-  );
-}
-
-function FeatureCard({
-  title,
-  description,
-}: {
-  title: string;
-  description: string[];
-}) {
-  return (
-    <div className="p-4 bg-transparent shadow-lg rounded-lg w-fuil">
-      <div className="p-4 px-32">
-        <div className="p-4">{title}</div>
-        {description.map((desc, index) => (
-          <p key={index} className="text-gray-700">
-            {desc}
-          </p>
-        ))}
-      </div>
-    </div>
   );
 }
 
@@ -98,38 +77,7 @@ function App() {
       </div>
       <div className="text-center py-8">
         <h2 className="text-3xl py-8">핵심 기능</h2>
-        <div className="flex flex-wrap justify-center text-2xl py-8">
-          <FeatureCard
-            title="법률 챗봇"
-            description={[
-              "노무사를 만나기전 무료로 이용해보세요.",
-              "필요한 과정을 이해하고 준비할 수 있도록 도와드립니다.",
-            ]}
-          />
-          <FeatureCard
-            title="비공개 노조"
-            description={[
-              "회사에 불이익을 받을까 두려우신가요?",
-              "노조에서도 신원을 알 수 없도록 모든 정보는 보호됩니다.",
-              "5인 이하 사업장이나 프리랜서들도 권익을 보호 받으세요.",
-            ]}
-          />
-          <FeatureCard
-            title="온라인 노조"
-            description={[
-              "복잡한 서류작업은 저희에게 맡겨주세요.",
-              "노조 설립, 병합, 가입 모든 필요한 기능을 편리하게",
-              "이미 가입되어있는 많은 노조들과 쉽게 협업도 가능합니다.",
-            ]}
-          />
-          <FeatureCard
-            title="기업 컨설팅"
-            description={[
-              "노동자간 이슈가 발생하셨나요?",
-              "성희롱, 폭언 등 분쟁으로 부터 노동자, 회사를 위한 가이드를 제공해드립니다.",
-            ]}
-          />
-        </div>
+        <FeatureCards />
       </div>
       <div id="register" className="flex flex-wrap text-slate-500 p-8">
         <div className="px-8">유니원에 대한 뉴스 및 업데이트 받아보기</div>
