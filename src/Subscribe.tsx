@@ -1,7 +1,6 @@
-import { FormEvent, useEffect, useState } from "react";
+import { FormEvent, useState } from "react";
 
 export function Subscribe() {
-  const [email, setEmail] = useState<string>("");
   const [message, setMessage] = useState<string>("");
 
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
@@ -24,8 +23,8 @@ export function Subscribe() {
       .then((response) => {
         console.log(response);
         if (response.ok) {
-          if (response.status == 400) setMessage("구독에 실패했습니다.");
-          else if (response.status == 201)
+          if (response.status === 400) setMessage("구독에 실패했습니다.");
+          else if (response.status === 201)
             setMessage("업데이트를 받아보기 위한 설정이 완료되었습니다!");
           else setMessage("구독에 실패했습니다.");
         } else {
