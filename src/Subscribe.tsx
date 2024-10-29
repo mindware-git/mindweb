@@ -24,17 +24,17 @@ export function Subscribe() {
       .then((response) => {
         console.log(response);
         if (response.ok) {
-          console.log(response.json());
+          if (response.status == 400) setMessage("구독에 실패했습니다.");
+          else if (response.status == 201)
+            setMessage("업데이트를 받아보기 위한 설정이 완료되었습니다!");
+          else setMessage("구독에 실패했습니다.");
         } else {
-          console.log("Status: " + response.status);
+          setMessage("구독에 실패했습니다.");
         }
-      })
-      .then((data) => {
-        setMessage("업데이트를 받아보기 위한 설정이 완료되었습니다!");
       })
       .catch((error) => {
         console.log(error);
-        setMessage("구독에 실패했습니다.");
+        setMessage("죄송합니다. 문제가 발생했습니다.");
       });
   }
   return (
