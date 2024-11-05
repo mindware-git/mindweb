@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/mindweb/static/css/main.a8ca0315.css",
-    "main.js": "/mindweb/static/js/main.e47a3d08.js",
+    "main.css": "/mindweb/static/css/main.b071b21d.css",
+    "main.js": "/mindweb/static/js/main.464e112f.js",
     "static/js/453.8abd53ee.chunk.js": "/mindweb/static/js/453.8abd53ee.chunk.js",
     "index.html": "/mindweb/index.html",
-    "main.a8ca0315.css.map": "/mindweb/static/css/main.a8ca0315.css.map",
-    "main.e47a3d08.js.map": "/mindweb/static/js/main.e47a3d08.js.map",
+    "main.b071b21d.css.map": "/mindweb/static/css/main.b071b21d.css.map",
+    "main.464e112f.js.map": "/mindweb/static/js/main.464e112f.js.map",
     "453.8abd53ee.chunk.js.map": "/mindweb/static/js/453.8abd53ee.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a8ca0315.css",
-    "static/js/main.e47a3d08.js"
+    "static/css/main.b071b21d.css",
+    "static/js/main.464e112f.js"
   ]
 }
