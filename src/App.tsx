@@ -31,7 +31,7 @@ function App() {
     <>
       <div className="text-center py-16">
         <h1 className="text-4xl py-8">Unione</h1>
-        <h2 className="text-3xl md:text-5xl lg:text-6xl py-8">
+        <h2 className="text-3xl py-8 md:text-5xl lg:text-6xl">
           <p>유니원은 노동자의 권익 향상을</p>
           <p>목표로 하는 노동조합 플랫폼입니다</p>
         </h2>
