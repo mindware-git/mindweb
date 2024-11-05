@@ -44,17 +44,17 @@ export function Subscribe() {
         <form
           method="post"
           onSubmit={handleSubmit}
-          className="flex items-center space-x-4"
+          className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4"
         >
           <input
             name="email"
             defaultValue="이메일 주소"
             onFocus={(e) => (e.target.value = "")}
-            className="min-w-80 appearance-none bg-transparent border-2 border-gray-200 rounded-md py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500 transition duration-150 ease-in-out"
+            className="w-full sm:w-auto min-w-80 appearance-none bg-transparent border-2 border-gray-200 rounded-md py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500 transition duration-150 ease-in-out"
           />
           <button
             type="submit"
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full"
+            className="w-full sm:w-auto bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full"
           >
             가입
           </button>
