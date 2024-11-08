@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { FeatureCards } from "./Feature";
 import { Subscribe } from "./Subscribe";
 import { FAQ } from "./FAQ";
+import { Nav } from "./components/Navbar";
 
 function SvgInline({ url }: { url: string }) {
   const [svg, setSvg] = useState<string | undefined>(undefined);
@@ -29,6 +30,7 @@ function SvgInline({ url }: { url: string }) {
 function App() {
   return (
     <>
+      <Nav />
       <div className="text-center py-16">
         <h1 className="text-4xl py-8">Unione</h1>
         <h2 className="text-3xl py-8 md:text-5xl lg:text-6xl">
