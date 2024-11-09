@@ -8,6 +8,6 @@ test("renders learn react link", () => {
       <App />
     </BrowserRouter>
   );
-  const linkElement = screen.getByText(/Unione/i);
-  expect(linkElement).toBeInTheDocument();
+  const linkElements = screen.getAllByText(/Unione/i);
+  expect(linkElements.length).toBeGreaterThan(0);
 });
