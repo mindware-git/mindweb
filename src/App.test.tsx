@@ -8,6 +8,6 @@ test("renders learn react link", () => {
       <App />
     </BrowserRouter>
   );
-  const linkElements = screen.getAllByText(/Unione/i);
+  const linkElements = screen.getAllByText(/WorkUp/i);
   expect(linkElements.length).toBeGreaterThan(0);
 });

@@ -32,10 +32,10 @@ function App() {
     <>
       <Nav />
       <div className="text-center py-16">
-        <h1 className="text-4xl py-8">Unione</h1>
-        <h2 className="text-3xl py-8 md:text-5xl lg:text-6xl">
-          <p>유니원은 노동자의 권익 향상을</p>
-          <p>목표로 하는 노동조합 플랫폼입니다</p>
+        <h1 className="text-4xl py-8">WorkUp</h1>
+        <h2 className="text-3xl py-8 sm:text-3l md:text-5xl lg:text-6xl">
+          <p>워크업은 직장 문화 수준 향상</p>
+          <p>노동자 권익 향상을 목표로 합니다.</p>
         </h2>
       </div>
       <div className="flex items-center justify-center">
@@ -51,12 +51,11 @@ function App() {
         <FeatureCards />
       </div>
       <div id="register" className="flex flex-wrap text-slate-500 p-8">
-        <div className="py-8 pr-8">유니원에 대한 뉴스 및 업데이트 받아보기</div>
         <div>
           <Subscribe />
           <div className="py-8">
             <p>
-              유니원의 기존 및 향후 제품과 서비스에 관한 업데이트와 마케팅
+              워크업의 기존 및 향후 제품과 서비스에 관한 업데이트와 마케팅
               메시지를 수신하는 데 동의하게 됩니다.
             </p>
             <p>

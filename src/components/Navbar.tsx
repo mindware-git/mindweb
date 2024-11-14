@@ -31,7 +31,7 @@ export function Nav() {
           )}
         </div>
         <NavLink to="/aboutus" className="hover:underline">
-          Unione 소개
+          WorkUp 소개
         </NavLink>
       </div>
     </nav>
